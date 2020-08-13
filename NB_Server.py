@@ -12,4 +12,4 @@ def Encode_():
 
 if __name__ == '__main__':
 
-	app.run(debug=True,host='18.223.149.6',port=80)
+	app.run(debug=True,host='0.0.0.0',port=8080)
