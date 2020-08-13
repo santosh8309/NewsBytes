@@ -6,9 +6,10 @@ app = Flask(__name__)
 def main():
     print("Hello! You have arrived at a default page!")
  
-@app.route('/NewsBytes')
+@app.route('/NewsBytes', methods=["GET", "POST"])
 def Encode_():
 	print("Hello, Santosh!")
+	return "True"
 
 if __name__ == '__main__':
 
