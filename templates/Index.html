@@ -5,9 +5,11 @@
 	<link rel="stylesheet" href="style_.css" type="text/css">
 	</head>
    <body>
-	<form method="POST">
-    <input name="text", placeholder="Enter input URL">
-    <input type="submit">
-</form>
+	
+		<form action="{{ url_for('NewsBytes') }}" method="post">
+			<input type="text" name="URL">
+			<input type="submit">
+
+		</form>
    </body>
 </html>
