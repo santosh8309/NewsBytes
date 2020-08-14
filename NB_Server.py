@@ -1,4 +1,5 @@
 from flask import Flask, request, render_template
+import hashlib 
  
 app = Flask(__name__, template_folder='templates')
  
@@ -6,11 +7,16 @@ app = Flask(__name__, template_folder='templates')
 def main():
     return render_template("Index.html")
  
-@app.route('/NewsBytes', methods=["POST"])
-def NewsBytes():
+@app.route('/NewsBytesURLEncode', methods=["POST"])
+def NewsBytesURLEncode():
 	text = request.form['URL']
-	processed_text = text.upper()
-	return processed_text
+	result = hashlib.sha256(text.encode())
+	return(result.hexdigest())
+  
+# printing the equivalent hexadecimal value. 
+print("The hexadecimal equivalent of SHA256 is : ") 
+print(result.hexdigest()) 
+  
 
 if __name__ == '__main__':
 
