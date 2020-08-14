@@ -13,10 +13,6 @@ def NewsBytesURLEncode():
 	result = hashlib.sha256(text.encode())
 	return(result.hexdigest())
   
-# printing the equivalent hexadecimal value. 
-print("The hexadecimal equivalent of SHA256 is : ") 
-print(result.hexdigest()) 
-  
 
 if __name__ == '__main__':
 
