@@ -9,7 +9,7 @@ def main():
 @app.route('/NewsBytes', methods=["GET", "POST"])
 def Encode_():
 	
-	return render_template("template/Index.html")
+	return render_template("Index.html")
 
 if __name__ == '__main__':
 
