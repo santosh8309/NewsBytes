@@ -8,10 +8,9 @@ def main():
  
 @app.route('/NewsBytes', methods=["GET", "POST"])
 def Encode_():
-	
 	text = request.form['text']
-    processed_text = text.upper()
-    return processed_text
+	processed_text = text.upper()
+	return processed_text
 
 if __name__ == '__main__':
 
