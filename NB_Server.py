@@ -18,7 +18,7 @@ def NewsBytesURLEncode():
 	"""
 	text = request.form['URL']
 	result = hashlib.sha256(text.encode())
-	return("Hashed URL: ".format(result.hexdigest()))
+	return("Hashed URL: "+format(result.hexdigest()))
   
 
 if __name__ == '__main__':
