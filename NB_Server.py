@@ -6,7 +6,7 @@ app = Flask(__name__, template_folder='templates')
 def main():
     return render_template("Index.html")
  
-@app.route('/NewsBytes', methods=["GET", "POST"])
+@app.route('/NewsBytes', methods=["GET"])
 def Encode_():
 	text = request.form['text']
 	processed_text = text.upper()
