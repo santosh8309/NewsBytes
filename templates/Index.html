@@ -2,14 +2,27 @@
 <title>NewsBytes</title>
 <html>
 	<head>
-	<link rel="stylesheet" href="style_.css" type="text/css">
+	<style>
+	.myDiv {
+	  border: 1px outset #FF5733;
+	  background-color: #D7D7D7;    
+	  text-align: center;
+	  position: absolute;
+	  margin-left: 225px;
+	  width: 450px;
+	  height: 250px;
+	  border: 2px red"
+	}
+	</style>
 	</head>
    <body>
-	
-		<form action="{{ url_for('NewsBytesURLEncode') }}" method="POST">
-			<input type="text" name="URL", placeholder="Please Enter URL">
-			<input type="submit">
+		<div class="myDiv">
+			<h2>URL Hashing System</h2>
+			<form action="{{ url_for('NewsBytesURLEncode') }}" method="POST">
+			  <input type="text" name="URL", placeholder="Please Enter URL">
+			  <input type="submit">
 
-		</form>
+			</form>
+</div>
    </body>
 </html>
