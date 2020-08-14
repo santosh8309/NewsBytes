@@ -1,15 +1,17 @@
-from flask import Flask, render_template
+from flask import Flask, request, render_template
  
 app = Flask(__name__, template_folder='templates')
  
 @app.route('/')
 def main():
-    print("Hello! You have arrived at a default page!")
+    return render_template("Index.html")
  
 @app.route('/NewsBytes', methods=["GET", "POST"])
 def Encode_():
 	
-	return render_template("Index.html")
+	text = request.form['text']
+    processed_text = text.upper()
+    return processed_text
 
 if __name__ == '__main__':
 
